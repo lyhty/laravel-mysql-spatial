@@ -49,6 +49,7 @@ class MultiLineString extends GeometryCollection
         }, $this->getLineStrings()));
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         $this->validateItemType($value);
@@ -83,6 +84,7 @@ class MultiLineString extends GeometryCollection
      *
      * @return \GeoJson\Geometry\MultiLineString
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         $lineStrings = [];
